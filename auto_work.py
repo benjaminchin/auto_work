@@ -52,10 +52,10 @@ def main():
     driver.get('https://app.joinhomebase.com/accounts/sign_in')
 
     email_form = driver.find_element_by_id('account_login')
-    email_form.send_keys('benjamin.d.chin@gmail.com')
+    email_form.send_keys('EMAIL_HIDDEN_FOR_PRIVACY')
 
     password_form = driver.find_element_by_id('account_password')
-    password_form.send_keys('B3nhomebase')
+    password_form.send_keys('PASSWORD_HIDDEN_FOR_PRIVACY')
     password_form.send_keys(Keys.RETURN)
 
     time.sleep(4)
@@ -95,7 +95,7 @@ def main():
         }
         print(event)
         
-        add_event = service.events().insert(calendarId='benjamin.d.chin@gmail.com', body=event).execute()
+        add_event = service.events().insert(calendarId='EMAIL_HIDDEN_FOR_PRIVACY', body=event).execute()
         print('Event created: %s' % (add_event.get('htmlLink')))
 
 
