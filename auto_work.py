@@ -42,7 +42,7 @@ def main():
     # print("PRINTING NOW")
     # print(now)
 
-    # events_result = service.events().list(calendarId='benjamin.d.chin@gmail.com', maxResults=10, timeMin=week_ago).execute()
+    # events_result = service.events().list(calendarId='EMAIL_HIDDEN_FOR_PRIVACY', maxResults=10, timeMin=week_ago).execute()
     # events = events_result.get('items', [])
     # print(events)
 
