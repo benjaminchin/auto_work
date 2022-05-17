@@ -38,15 +38,6 @@ def main():
 
     service = build('calendar', 'v3', credentials=creds)
 
-    # now = datetime.date.today
-    # print("PRINTING NOW")
-    # print(now)
-
-    # events_result = service.events().list(calendarId='EMAIL_HIDDEN_FOR_PRIVACY', maxResults=10, timeMin=week_ago).execute()
-    # events = events_result.get('items', [])
-    # print(events)
-
-    # _______________SELENIUM BREAK_________________________________
 
     driver = webdriver.Chrome()
     driver.get('https://app.joinhomebase.com/accounts/sign_in')
@@ -60,11 +51,9 @@ def main():
 
     time.sleep(4)
     schedule = driver.find_element_by_class_name('js-shifts-list')
-    # print(schedule)
     shifts = schedule.find_elements_by_tag_name('li')
     for item in shifts:
         info = item.text
-        # print(type(info))
 
         lst = info.split()
         print(lst)
@@ -182,7 +171,6 @@ def get_minutes(date):
     minutes = date[4]
     colon_index = minutes.find(':') + 1
     end_index = len(minutes) - 2
-    # print(minutes[colon_index: end_index])
     return minutes[colon_index:end_index]
 
 
@@ -191,7 +179,6 @@ def get_end_minutes(date):
     minutes = date[6]
     colon_index = minutes.find(':') + 1
     end_index = len(minutes) - 2
-    # print(minutes[colon_index: end_index])
     return minutes[colon_index:end_index]
 
 
